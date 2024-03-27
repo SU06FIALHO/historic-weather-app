@@ -12,15 +12,15 @@
 <body>
   <div class="weather-app-box">
   <header>
-    <form class="search-form">
-      <input type="search" placeholder="Write me a city..." required class="input-city">
+    <form class="search-form" id="search-form">
+      <input type="search" placeholder="Write me a city..." required class="input-city" id="city-search-form">
       <input type="submit" class="input-submit" value="Search" >
     </form>
   </header>
   <main>
     <div class="weather-app-main">
     <div>
-  <h1 class="weather-city-display">Lisbon</h1>
+  <h1 class="weather-city-display" id="city-display">Lisbon</h1>
   <p class="weather-data-display">Monday 20:00, Clean Sky <br>
   Humidity: <strong>50 %</strong>, Wind: <strong>3 km/h</strong>
   </p>
@@ -38,5 +38,6 @@
     <a href="https://historic-weather-app.netlify.app/" target="_blank"> Netlify</a>
   </footer>
   </div>
+  <script src="src/index.js"></script>
 </body>
 </html>
