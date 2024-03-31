@@ -71,12 +71,14 @@ strong {
   font-size: 80px;
   font-weight: bold;
   margin-left: 10px;
+  line-height: 90px;
   color: #607274;
 }
 .weather-unit {
   font-size: 35px;
   margin-top: 10px;
   font-weight: 600;
+  
   color: #607274;
 }
 footer {
