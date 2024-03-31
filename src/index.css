@@ -64,8 +64,8 @@ strong {
   display: flex;
 }
 .weather-emoji {
-  font-size: 40px;
-  margin-top: 20px;
+  width:  90px;
+  height: 90px;
 }
 .weather-temperature {
   font-size: 80px;
