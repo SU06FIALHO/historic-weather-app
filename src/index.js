@@ -51,7 +51,29 @@ function submitCitySearch (event) {
   apiSearchCity(citySearchForm.value);
 }
 
+function displayForecast(){
+  let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `<div class="forecast-date">${day} </div>
+  <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="" width="60">
+</div>
+<div class="forecast-temperature">
+  <span class="temp-max">12° /</span>
+  <span class="forecast-min">10° </span>
+</div>`;
+  });
+
+   let forecastElement = document.querySelector("#forecast-java");
+   forecastElement.innerHTML = forecastHtml;
+
+}
+
 let searchFormElement = document.querySelector("#search-form");
 searchFormElement.addEventListener ("submit", submitCitySearch);
 
 apiSearchCity ("Lisbon");
+displayForecast ();
