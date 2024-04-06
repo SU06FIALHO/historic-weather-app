@@ -92,31 +92,21 @@ a {
   color: #607274;
   font-weight: 500;
 }
-.forecast {
-  margin-top: 50px;
-  padding-left: 10px;
+
+.weather-forecast {
+  margin-top: 20px;
+  text-align: left;
   color: black;
-  display: flex;
-  justify-content: space-between;
-  
-}
-.forecast-date {
-  font-size: 16px;
-  opacity: 0.5;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
- 
-}
-img {
-  margin-left: 15px;
-  
-}
-.forecast-temperature {
-  font-size: 13px;
-  margin-left: 23px;
 
 }
-.forecast-min {
+.forecast-day {
+  font-size: 16px;
+  opacity: 0.5;
+  
+}
+.forecast-temperatures {
+  font-size: 13px;
+}
+.forecast-temp-min {
   opacity: 0.5;
 }
