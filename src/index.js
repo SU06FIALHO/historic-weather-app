@@ -50,6 +50,12 @@ function submitCitySearch (event) {
   
   apiSearchCity(citySearchForm.value);
 }
+function formatForecastDay (timestamp) {
+let date = new Date(timestamp * 1000);
+let forecastDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+return forecastDays [date.getDay()];
+
+}
 
 function getForecast(city) {
   let apiKey = "74ba2ac4o95a095ca8b15001f53d3et4";
@@ -61,20 +67,28 @@ axios.get(apiUrl).then(displayForecast);
 function displayForecast (response) {
   console.log(response.data);
 let forecastElement = document.querySelector("#forecast");
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+
 let forecastHtml = "";
 
-days.forEach(function (day) {
-forecastHtml = forecastHtml + `
+response.data.daily.forEach(function (day, index) {
+  if (index > 0 && index < 6) {
+    forecastHtml =
+      forecastHtml +
+      `
 <div class="weather-forecast-col">
-      <div class="forecast-day">${day}</div>
-      <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png" alt="" width="40"/>
+      <div class="forecast-day">${formatForecastDay(day.time)}</div>
+      <img src="${day.condition.icon_url}" alt="" width="75"/>
 <div class="forecast-temperatures">
-      <span class="forecast-temp-max">18°</span> 
-      <span class="forecast-temp-min">12°</span>
+      <span class="forecast-temp-max">${Math.round(
+        day.temperature.maximum
+      )}°  </span> 
+      <span class="forecast-temp-min">${Math.round(
+        day.temperature.minimum
+      )}°</span>
 </div>
     </div>
 `;
+  }
 });
 forecastElement.innerHTML = forecastHtml;
 }

@@ -52,7 +52,7 @@ main {
 }
 .weather-data-display {
   font-size: 15px;
-  line-height: 20px;
+  line-height: 25px;
   color: rgba(5, 5, 5, 0.5);
 }
 strong {
@@ -64,8 +64,8 @@ strong {
   display: flex;
 }
 .weather-emoji {
-  width:  90px;
-  height: 90px;
+  width:  95px;
+  height: 95px;
 }
 .weather-temperature {
   font-size: 80px;
@@ -87,6 +87,7 @@ footer {
   text-align: center;
   font-size: 13px;
   color: rgba(5, 5, 5, 0.5);
+  margin-top: 20px;
 }
 a {
   color: #607274;
@@ -94,8 +95,8 @@ a {
 }
 
 .weather-forecast {
-  margin-top: 20px;
-  text-align: left;
+  margin-top: 30px;
+  text-align: center;
   color: black;
   display: flex;
   justify-content: space-between;
@@ -110,7 +111,7 @@ a {
   
 }
 .forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
 }
 .forecast-temp-min {
   opacity: 0.5;
