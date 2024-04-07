@@ -84,7 +84,7 @@ response.data.daily.forEach(function (day, index) {
       )}°  </span> 
       <span class="forecast-temp-min">${Math.round(
         day.temperature.minimum
-      )}°</span>
+      )}°  </span>
 </div>
     </div>
 `;

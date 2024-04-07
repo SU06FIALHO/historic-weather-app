@@ -112,6 +112,7 @@ a {
 }
 .forecast-temperatures {
   font-size: 14px;
+  color: #607274;
 }
 .forecast-temp-min {
   opacity: 0.5;
